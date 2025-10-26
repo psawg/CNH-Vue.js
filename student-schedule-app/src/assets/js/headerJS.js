@@ -71,3 +71,16 @@ function smoothScroll(target) {
 
   requestAnimationFrame(animation);
 }
+
+
+window.addEventListener('scroll', () => {
+  const navBar = document.querySelector('.NavBar');
+  if (!navBar) return;
+  if (window.scrollY > 200) {
+    navBar.classList.add('nav-hide');
+    navBar.classList.remove('nav-show');
+  } else {
+    navBar.classList.add('nav-show');
+    navBar.classList.remove('nav-hide');
+  }
+});

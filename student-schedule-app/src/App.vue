@@ -10,11 +10,12 @@
 
     <main class="scrollbar">
       <router-view></router-view>
+      <Footer />
     </main>
     
-    <footer>
-      <Footer />
-    </footer>
+    <!-- <footer>
+      x
+    </footer> -->
     
 </template>
 

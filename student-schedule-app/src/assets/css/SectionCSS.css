@@ -85,7 +85,7 @@
 
 /* NEWS MARQUEE */
 .marquee {
-  background-color: white;
+  background-color:  #ff7f50;
   border-radius: 24px 0 0 24px;
   color: rgb(0, 0, 0);
   z-index: 1;

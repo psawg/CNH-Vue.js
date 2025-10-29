@@ -3,20 +3,13 @@
       <img src="@/assets/images/SectionLogo.png" alt="Logo" class="logo" />
     </div>
 
-   <header>
-      <Header />
-      
-    </header>
 
     <main class="scrollbar">
+      <Header />
       <router-view></router-view>
       <Footer />
     </main>
-    
-    <!-- <footer>
-      x
-    </footer> -->
-    
+
 </template>
 
 <script>

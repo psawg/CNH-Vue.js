@@ -10,11 +10,11 @@
 
         <div id="footerContent">
           <div id="content1">
-            <p class="about"><a href="/page/AboutUs_Page.html">ABOUT</a></p>
+            <p class="about"><a href="#">ABOUT</a></p>
             <p id="privacy"><a href="#">PRIVACY</a></p>
           </div>
           <div id="content2">
-            <p id="contact"><a href="/page/ContactUs_page.html">CONTACT</a></p>
+            <p id="contact"><a href="">CONTACT</a></p>
             <p id="faq"><a href="#">FAQ</a></p>
           </div>
         </div>

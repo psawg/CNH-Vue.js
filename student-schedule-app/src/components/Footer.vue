@@ -10,7 +10,7 @@
 
         <div id="footerContent">
           <div id="content1">
-            <p class="about"><a href="#">ABOUT</a></p>
+            <p class="about"><router-link to="/aboutus">ABOUT</router-link></p>
             <p id="privacy"><a href="#">PRIVACY</a></p>
           </div>
           <div id="content2">
@@ -38,10 +38,10 @@
     </div>
 
     <div class="copyrightFooter">
-      <div id="content3"><h6>© 2023, All Of Games</h6></div>
+      <div id="content3"><h6>© 2025, All Of Games</h6></div>
     </div>
 </template>
 
 <style>
     @import "@/assets/css/FooterCSS.css";
-</style>
+</style>  

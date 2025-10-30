@@ -88,60 +88,57 @@
 
     <!-- Bottom Content -->
     <div class="botContent" id="botContent">
-      <table>
-        <tr>
-          <td>
-            <a href="https://www.playstation.com/en-gb/games/bloodborne/">
-              <img src="@/assets/images/logo_of_game/logo_bloodborne.png" alt="Bloodborne" />
-            </a>
-          </td>
+  <table class="logo-table">
+    <tbody>
+      <tr>
+        <td>
+          <a href="https://www.playstation.com/en-gb/games/bloodborne/">
+            <img src="@/assets/images/logo_of_game/logo_bloodborne.png" alt="Bloodborne" />
+          </a>
+        </td>
+        <td>
+          <a href="https://deltarune.com/">
+            <img src="@/assets/images/logo_of_game/logo_deltarune.png" alt="Deltarune" />
+          </a>
+        </td>
+        <td>
+          <a href="https://www.supergiantgames.com/games/hades/">
+            <img src="@/assets/images/logo_of_game/logo_hades.png" alt="Hades" />
+          </a>
+        </td>
+        <td>
+          <a href="https://www.hollowknight.com/">
+            <img src="@/assets/images/logo_of_game/logo_hollow_knight.png" alt="Hollow Knight" />
+          </a>
+        </td>
+      </tr>
 
-          <td>
-            <a href="https://deltarune.com/">
-              <img src="@/assets/images/logo_of_game/logo_deltarune.png" alt="Deltarune" />
-            </a>
-          </td>
+      <tr>
+        <td>
+          <a href="https://www.monsterhunter.com/">
+            <img src="@/assets/images/logo_of_game/logo_monster_hunter.png" alt="Monster Hunter" />
+          </a>
+        </td>
+        <td>
+          <a href="https://www.stardewvalley.net/">
+            <img src="@/assets/images/logo_of_game/logo_stardew_valley.png" alt="Stardew Valley" />
+          </a>
+        </td>
+        <td>
+          <a href="https://stray.game/">
+            <img src="@/assets/images/logo_of_game/logo_stray.png" alt="Stray" />
+          </a>
+        </td>
+        <td>
+          <a href="https://undertale.com/">
+            <img src="@/assets/images/logo_of_game/logo_undertale.png" alt="Undertale" />
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-          <td>
-            <a href="https://www.supergiantgames.com/games/hades/">
-              <img src="@/assets/images/logo_of_game/logo_hades.png" alt="Hades" />
-            </a>
-          </td>
-
-          <td>
-            <a href="https://www.hollowknight.com/">
-              <img src="@/assets/images/logo_of_game/logo_hollow_knight.png" alt="Hollow Knight" />
-            </a>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <a href="https://www.monsterhunter.com/">
-              <img src="@/assets/images/logo_of_game/logo_monster_hunter.png" alt="Monster Hunter" />
-            </a>
-          </td>
-
-          <td>
-            <a href="https://www.stardewvalley.net/">
-              <img src="@/assets/images/logo_of_game/logo_stardew_valley.png" alt="Stardew Valley" />
-            </a>
-          </td>
-
-          <td>
-            <a href="https://stray.game/">
-              <img src="@/assets/images/logo_of_game/logo_stray.png" alt="Stray" />
-            </a>
-          </td>
-
-          <td>
-            <a href="https://undertale.com/">
-              <img src="@/assets/images/logo_of_game/logo_undertale.png" alt="Undertale" />
-            </a>
-          </td>
-        </tr>
-      </table>
-    </div>
   </div>
 </template>
 

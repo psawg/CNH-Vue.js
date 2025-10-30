@@ -26,13 +26,15 @@ header {
   bottom: 0;
   overflow-y: auto;
   overflow-x: hidden;
-  /* padding-bottom: 60px; để chừa chỗ cho footer */
+  padding-bottom: 0px; 
   scroll-behavior: smooth;
 
   /* Custom scrollbar */
   scrollbar-width: thin;
   scrollbar-color: #ffffff #111;
 }
+
+
 
 /* Thanh cuộn custom cho Chrome / Edge */
 .scrollbar::-webkit-scrollbar {

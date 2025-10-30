@@ -1,24 +1,25 @@
-// Import SDK Firebase
+
+
+
+// src/firebaseConfig.js
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
-import { getStorage } from "firebase/storage";
 
-// ⚙️ Cấu hình Firebase (dán từ web của bạn vào)
+// ⚠️ thay giá trị bằng config của dự án bạn
 const firebaseConfig = {
-  apiKey: "AIzaSyADUlfIA1rAnbD_YkZHbMi6U0UGDaUgAGU",
+  apiKey: "AIzaSyADlAUfIALzAmDb_Yk17bHMi6UQGUDaAGU",
   authDomain: "allofgame-1fe7a.firebaseapp.com",
   projectId: "allofgame-1fe7a",
-  storageBucket: "allofgame-1fe7a.appspot.com",
-  messagingSenderId: "187342408788",
-  appId: "1:187342408788:web:8afae983e81f58707684",
-  measurementId: "G-8MKSYSW8MB"
+  storageBucket: "allofgame-1fe7a.firebasestorage.app",
+  messagingSenderId: "1073424807885",
+  appId: "1:1073424807885:web:0ef8a9ee38a8f15f077684",
+  measurementId: "G-8MSKVYSBM8"
 };
 
-// 🚀 Khởi tạo Firebase App
-const app = initializeApp(firebaseConfig);
+export const firebaseApp = initializeApp(firebaseConfig);
+export const db = getFirestore(firebaseApp);
+export const auth = getAuth(firebaseApp);
 
-// 🧠 Export các dịch vụ để Vue sử dụng
-export const db = getFirestore(app);     // Database Firestore
-export const auth = getAuth(app);        // Đăng nhập
-export const storage = getStorage(app);  // Lưu ảnh
+// (tuỳ chọn) export mặc định nếu bạn thích import default
+export default { firebaseApp, db, auth };

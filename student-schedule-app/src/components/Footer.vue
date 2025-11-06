@@ -38,7 +38,7 @@
     </div>
 
     <div class="copyrightFooter">
-      <div id="content3"><h6>© 2025, All Of Games</h6></div>
+      <div id="content3"><h6>© 2025 All Of Games</h6></div>
     </div>
 </template>
 

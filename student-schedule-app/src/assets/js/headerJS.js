@@ -101,3 +101,138 @@ function smoothScroll(container, targetPosition) {
 
   requestAnimationFrame(animation);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Mục đích: Điều khiển NavBar, SideNav, cuộn mượt và điều hướng router an toàn
+
+// import { useRouter, useRoute } from "vue-router";
+
+// export function useHeader() {
+//   const router = useRouter();
+//   const route = useRoute();
+
+//   // =====================================
+//   // ✅ Mở / Đóng Side Navigation
+//   // =====================================
+//   const openNav = () => {
+//     const sideNav = document.getElementById("idSideNav");
+//     if (sideNav) sideNav.style.width = "250px";
+//   };
+
+//   const closeNav = () => {
+//     const sideNav = document.getElementById("idSideNav");
+//     if (sideNav) sideNav.style.width = "0";
+//   };
+
+//   // =====================================
+//   // ✅ Behavior ẩn/hiện NavBar khi cuộn
+//   // =====================================
+//   let lastScrollTop = 0;
+//   let timeout;
+
+//   const setupNavScroll = () => {
+//     const scrollTarget = document.querySelector(".scrollbar") || window;
+
+//     scrollTarget.addEventListener("scroll", () => {
+//       const navBar = document.querySelector(".NavBar");
+//       if (!navBar) return;
+//       clearTimeout(timeout);
+
+//       timeout = setTimeout(() => {
+//         const threshold = 200;
+//         const scrollTop =
+//           scrollTarget.scrollTop || window.scrollY || document.documentElement.scrollTop;
+
+//         if (scrollTop > lastScrollTop + threshold) {
+//           navBar.classList.add("nav-hide");
+//           navBar.classList.remove("nav-show");
+//         } else {
+//           navBar.classList.add("nav-show");
+//           navBar.classList.remove("nav-hide");
+//         }
+
+//         lastScrollTop = scrollTop;
+//       }, 10);
+//     });
+//   };
+
+//   // =====================================
+//   // ✅ Cuộn mượt tới phần tử chỉ định
+//   // =====================================
+//   const smoothScroll = (selector) => {
+//     const target = document.querySelector(selector);
+//     if (!target) return;
+
+//     const targetPosition = target.getBoundingClientRect().top + window.scrollY;
+//     const startPosition = window.scrollY;
+//     const distance = targetPosition - startPosition;
+//     const duration = 1000;
+//     let startTime = null;
+
+//     function animation(currentTime) {
+//       if (startTime === null) startTime = currentTime;
+//       const elapsed = currentTime - startTime;
+//       const scrollY = ease(elapsed, startPosition, distance, duration);
+//       window.scrollTo(0, scrollY);
+//       if (elapsed < duration) requestAnimationFrame(animation);
+//     }
+
+//     function ease(t, b, c, d) {
+//       t /= d / 2;
+//       if (t < 1) return (c / 2) * t * t + b;
+//       t--;
+//       return (-c / 2) * (t * (t - 2) - 1) + b;
+//     }
+
+//     requestAnimationFrame(animation);
+//   };
+
+//   // =====================================
+//   // ✅ Các hành động chính (tương đương test1, test2)
+//   // =====================================
+// const goToNews = async () => {
+//   if (route.name !== "Section") {
+//     await router.push({ name: "Section" });
+//     // Đợi Vue render DOM thật sự rồi mới scroll
+//     setTimeout(() => smoothScroll("#midContent"), 1200);
+//   } else {
+//     setTimeout(() => smoothScroll("#midContent"), 200);
+//   }
+//   closeNav();
+// };
+
+// const goToGames = async () => {
+//   if (route.name !== "Section") {
+//     await router.push({ name: "Section" });
+//     setTimeout(() => smoothScroll("#botContent"), 1200);
+//   } else {
+//     setTimeout(() => smoothScroll("#botContent"), 200);
+//   }
+//   closeNav();
+// };
+
+//   // =====================================
+//   // ✅ Export cho Header.vue sử dụng
+//   // =====================================
+//   return {
+//     openNav,
+//     closeNav,
+//     setupNavScroll,
+//     goToNews,
+//     goToGames,
+//   };
+// }

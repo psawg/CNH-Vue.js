@@ -26,14 +26,14 @@
         <!-- Marquee -->
         <div class="marquee">
           <p>
-            <span>NEWS -</span>
-            <span>NEWS -</span>
-            <span>NEWS -</span>
-            <span>NEWS -</span>
-            <span>NEWS -</span>
-            <span>NEWS -</span>
-            <span>NEWS -</span>
-            <span>NEWS -</span>
+            <span>GAME -</span>
+            <span>GAME -</span>
+            <span>GAME -</span>
+            <span>GAME -</span>
+            <span>GAME -</span>
+            <span>GAME -</span>
+            <span>GAME -</span>
+            <span>GAME -</span>
           </p>
         </div>
 
@@ -54,10 +54,10 @@
               </div>
 
               <div class="newsItem">
-                <a href="/page/GTA_V_Page.html">
+                <router-link to="/gtaVI">
                   <img src="@/assets/images/img_news/GTA5.jpg" alt="GTA 5" />
                   <h3>Grand Theft Auto V</h3>
-                </a>
+                </router-link>
               </div>
 
               <div class="newsItem">
@@ -154,7 +154,7 @@ export default {
 </script>
 
 
-<style >
+<style scoped>
     @import "@/assets/css/SectionCSS.css";
     @import "@/assets/css/SectionCSS_Responsive.css";
 </style>

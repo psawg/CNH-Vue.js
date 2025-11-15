@@ -4,25 +4,27 @@
 
     <!-- LOGO -->
     <div class="logo-container">
-      <img src="@/assets/images/icon_logoHome.png" alt="logo" id="logo">
+      <router-link to="/">
+             <img src="@/assets/images/icon_logoHome.png" alt="logo" id="logo">
+      </router-link>
     </div>
 
     <!-- Hamburger Menu -->
     <div class="item-container">
       <!-- Nút mở SideNav -->
       <span class="openBtn" @click="openNav">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+        <div class="line" ></div>
+        <div class="line" ></div>
+        <div class="line" ></div>
       </span>
 
       <!-- LIST ITEM -->
       <ul class="sideNav" id="idSideNav">
         <!-- Close Button -->
         <li class="closeBtn" @click="closeNav">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
+          <div class="line" ></div>
+          <div class="line" ></div>
+          <div class="line" ></div>
         </li>
 
         <!-- Main Menu -->
@@ -37,9 +39,10 @@
 
         <!-- News -->
         <li>
-          <router-link to="/" @click.prevent="scrollToNews">
+          <router-link to="/login" >
             <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
-              <path clip-rule="evenodd" d="M5.5 11.493l2 2.998 2-2.998h4a1 1 0 001-1V1.5a.999.999 0 00-1-.999h-12a1 1 0 00-1 1v8.993a1 1 0 001 1h4z" stroke="currentColor" stroke-linecap="square" stroke-linejoin="round" />
+              <path clip-rule="evenodd" d="M5.5 11.493l2 2.998 2-2.998h4a1 1 0 001-1V1.5a.999.999 0 00-1-.999h-12a1 1 0 00-1 1v8.993a1 1 0 001 1h4z"
+                stroke="currentColor" stroke-linecap="square" stroke-linejoin="round" />
             </svg>
             News
           </router-link>
@@ -47,9 +50,10 @@
 
         <!-- Games -->
         <li>
-          <router-link to="/" href="#" @click.prevent="scrollToGames">
+          <router-link to="/login" >
             <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
-              <path d="M9.817 11.133l-.447.224.447-.224zM9.5 10.5l.447-.224A.5.5 0 009.5 10v.5zm-4 0V10a.5.5 0 00-.447.276l.447.224zm8.5-5v4.528h1V5.5h-1zm-3.736 5.41l-.317-.634-.894.448.316.633.895-.447zM9.5 10h-4v1h4v-1zm-4.447.276l-.317.634.894.447.317-.633-.894-.448zM1 10.028V5.5H0v4.528h1zM3.5 3h8V2h-8v1zm-.528 9A1.972 1.972 0 011 10.028H0A2.972 2.972 0 002.972 13v-1zm9.056 0c-.747 0-1.43-.422-1.764-1.09l-.894.447A2.972 2.972 0 0012.027 13v-1zM14 10.028A1.972 1.972 0 0112.028 12v1A2.972 2.972 0 0015 10.028h-1zm-9.264.882A1.972 1.972 0 012.972 12v1a2.972 2.972 0 002.658-1.643l-.894-.447zM15 5.5A3.5 3.5 0 0011.5 2v1A2.5 2.5 0 0114 5.5h1zm-14 0A2.5 2.5 0 013.5 3V2A3.5 3.5 0 000 5.5h1zM3 7h3V6H3v1zm1-2v3h1V5H4zm7 1h1V5h-1v1zM9 8h1V7H9v1z" fill="currentColor" />
+              <path d="M9.817 11.133l-.447.224.447-.224zM9.5 10.5l.447-.224A.5.5 0 009.5 10v.5zm-4 0V10a.5.5 0 00-.447.276l.447.224zm8.5-5v4.528h1V5.5h-1zm-3.736 5.41l-.317-.634-.894.448.316.633.895-.447zM9.5 10h-4v1h4v-1zm-4.447.276l-.317.634.894.447.317-.633-.894-.448zM1 10.028V5.5H0v4.528h1zM3.5 3h8V2h-8v1zm-.528 9A1.972 1.972 0 011 10.028H0A2.972 2.972 0 002.972 13v-1zm9.056 0c-.747 0-1.43-.422-1.764-1.09l-.894.447A2.972 2.972 0 0012.027 13v-1zM14 10.028A1.972 1.972 0 0112.028 12v1A2.972 2.972 0 0015 10.028h-1zm-9.264.882A1.972 1.972 0 012.972 12v1a2.972 2.972 0 002.658-1.643l-.894-.447zM15 5.5A3.5 3.5 0 0011.5 2v1A2.5 2.5 0 0114 5.5h1zm-14 0A2.5 2.5 0 013.5 3V2A3.5 3.5 0 000 5.5h1zM3 7h3V6H3v1zm1-2v3h1V5H4zm7 1h1V5h-1v1zM9 8h1V7H9v1z"
+                fill="currentColor" />
             </svg>
             Games
           </router-link>
@@ -57,36 +61,54 @@
 
         <!-- Account -->
         <li>
-          <router-link to="/">
+          <a href="#" @click="goToAccount">
             <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
               <path d="M3 13v.5h1V13H3zm8 0v.5h1V13h-1zm-7 0v-.5H3v.5h1zm2.5-3h2V9h-2v1zm4.5 2.5v.5h1v-.5h-1zM8.5 10a2.5 2.5 0 012.5 2.5h1A3.5 3.5 0 008.5 9v1zM4 12.5A2.5 2.5 0 016.5 10V9A3.5 3.5 0 003 12.5h1zM7.5 3A2.5 2.5 0 005 5.5h1A1.5 1.5 0 017.5 4V3zM10 5.5A2.5 2.5 0 007.5 3v1A1.5 1.5 0 019 5.5h1zM7.5 8A2.5 2.5 0 0010 5.5H9A1.5 1.5 0 017.5 7v1zm0-1A1.5 1.5 0 016 5.5H5A2.5 2.5 0 007.5 8V7zm0 7A6.5 6.5 0 011 7.5H0A7.5 7.5 0 007.5 15v-1zM14 7.5A6.5 6.5 0 017.5 14v1A7.5 7.5 0 0015 7.5h-1zM7.5 1A6.5 6.5 0 0114 7.5h1A7.5 7.5 0 007.5 0v1zm0-1A7.5 7.5 0 000 7.5h1A6.5 6.5 0 017.5 1V0z" fill="currentColor" />
             </svg>
             Account
-          </router-link>
+          </a>
         </li>
       </ul>
     </div>
   </div>
 </template>
 
-<script>
-import { openNav, closeNav, setupNavScroll, scrollToNews, scrollToGames } from '@/assets/js/headerJS.js'
+<script setup>
+import { onMounted } from 'vue'
 
-export default {
-  name: 'Header',
-  mounted() {
-    setupNavScroll()
-  },
-  methods: {
-    openNav,
-    closeNav,
-    scrollToNews,
-    scrollToGames
+// Import trực tiếp các hàm bạn export
+import { 
+  openNav,
+  closeNav,
+  setupNavScroll,
+} from '@/assets/js/headerJS.js'
+
+// chạy hiệu ứng NavBar khi component mount
+onMounted(() => {
+  setupNavScroll()
+})
+
+
+
+
+
+import { supabase } from "@/supabaseClient"
+import { useRouter } from "vue-router"
+
+const router = useRouter()
+
+const goToAccount = async () => {
+  const { data } = await supabase.auth.getUser()
+
+  if (data.user) {
+    router.push("/profile")   // 👉 ĐÃ ĐĂNG NHẬP → sang Profile
+  } else {
+    router.push("/login")     // 👉 CHƯA LOGIN → sang Login
   }
 }
 </script>
 
 <style>
-@import "@/assets/css/headerCSS.css";
-@import "@/assets/css/headerCSS_Responsive.css";
+  @import "@/assets/css/headerCSS.css";
+  @import "@/assets/css/headerCSS_Responsive.css";
 </style>
